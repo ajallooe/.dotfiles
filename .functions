@@ -1,0 +1,12 @@
+#!/bin/bash
+
+function is_in {
+  local list="$1"
+  local item="$2"
+  if [[ $list =~ (^|[[:space:]])"$item"($|[[:space:]]) ]] ; then
+    result=0
+  else
+    result=1
+  fi
+  return $result
+}
