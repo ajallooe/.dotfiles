@@ -54,6 +54,8 @@ Plugin 'rdnetto/YCM-Generator'
 Plugin 'tpope/vim-dispatch'
 " Plugin 'lox/vim-easytags'
 Plugin 'rking/ag.vim'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'benmills/vimux'
 
 Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'flazz/vim-colorschemes'
@@ -197,7 +199,7 @@ else
     autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%'>80v.\+', -1)
 endif
 
-inoremap jk <ESC>
+inoremap jj <ESC>
 
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
@@ -249,10 +251,19 @@ let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
             "\ 'matcher_fuzzy')
 "nnoremap <C-k> :<C-u>Unite -buffer-name=search -start-insert line<cr>
 
+let g:airline_powerline_fonts = 1
+
 set makeprg=make\ -j2
 
 nnoremap <silent> <Leader>b :TagbarToggle<CR>
 nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <F4> :Make!<cr>
 
-" nnoremap <F5> :!./my_great_program<cr>
+" nnoremap <F5> :!./my_great_program<CR>
+
+" Yank text to the OS X clipboard
+noremap <leader>y "*y
+noremap <leader>yy "*Y
+
+" Preserve indentation while pasting text from the OS X clipboard
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
