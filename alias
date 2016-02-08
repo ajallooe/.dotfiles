@@ -2,62 +2,75 @@
 # Upgraded ls
 alias ls='ls -GFh'
 
-# Safe rm
+# Safe rm and mv
 alias rm='rm -i'
+alias mv='mv -i'
 
 # requires source-highlight
-alias emacs="/usr/local/Cellar/emacs/24.4/Emacs.app/Contents/MacOS/Emacs -nw"
+alias emacs="emacs"
 
 # Handy shortcuts
 alias ll='ls -GFlh'
 
 alias txe="open -a TextEdit"
 alias txm="open -a TextMate"
-alias zth="zathura"
-# alias st="open /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+alias mup="mupdf-x11"
+
+autoload -U ssts cscs cscp
+
+alias sccs="cscp chinook $1"
 
 alias ssoh="ssh ohaton"
-function scoh { ssh ohaton "tar -cjf \"$1\"" | tar -xvjf; }
-export -f scoh
+#function scoh { ssh ohaton "tar -cjf \"$1\"" | tar -xvjf; }
+#export -f scoh
 
 alias ssif="ssh innisfree"
-function scif { ssh innisfree "tar -cjf \"$1\"" | tar -xvjf; }
-export -f scif
+#function scif { ssh innisfree "tar -cjf \"$1\"" | tar -xvjf; }
+#export -f scif
 
-alias ssch="ssh innisfree -t \"ssh chinook\""
-function scch { ssh innisfree -t "ssh chinook \"tar -cjf \"$1\" \"" | tar -xvjf; }
-export -f scch
+#alias ssch="ssh innisfree -t \"ssh chinook\""
+#function scch { ssh innisfree -t "ssh chinook \"tar -cjf \"$1\" \"" | tar -xvjf; }
+#export -f scch
 
 alias sscn="ssh chinook"
-function scif { ssh innisfree "tar -cjf \"$1\"" | tar -xvjf; }
-export -f scif
+#function scif { ssh innisfree "tar -cjf \"$1\"" | tar -xvjf; }
+#export -f scif
 
-function ssth { ssh innisfree -t "ssh chinook -t \"ssh \"$1\"\""; }
-export -f ssth
-function scth { ssh innisfree -t "ssh chinook -t \"ssh \"$1\" \"tar -cjf \"$2\" \"\"" | tar -xvjf; }
-export -f scth
+#function ssth { ssh innisfree -t "ssh chinook -t \"ssh \"$1\"\""; }
+#export -f ssth
+#function scth { ssh innisfree -t "ssh chinook -t \"ssh \"$1\" \"tar -cjf \"$2\" \"\"" | tar -xvjf; }
+#export -f scth
 
-function sstc { ssh chinook -t "ssh \"$1\""; }
-export -f sstc
-function sctc { ssh innisfree -t "ssh \"$1\" \"tar -cjf \"$2\" \"" | tar -xvjf; }
-export -f sctc
+#function sstc { ssh chinook -t "ssh \"$1\""; }
+#export -f sstc
+#function sctc { ssh innisfree -t "ssh \"$1\" \"tar -cjf \"$2\" \"" | tar -xvjf; }
+#export -f sctc
 
-alias ssgb="sstc gamebuilder"
-function scgb { sctc gamebuilder "$1"; }
-export -f scgb
+alias ssgb="ssts chinook gamebuilder"
+alias scgb="cscs chinook gamebuilder $1"
+#alias ssgb="sstc gamebuilder"
+#function scgb { sctc gamebuilder "$1"; }
+#export -f scgb
 
-alias ssfc="sstc fire-creek"
-function scfc { sctc fire-creek "$1"; }
-export -f scfc
+alias ssfc="ssts chinook fire-creek"
+alias scfc="cscs chinook fire-creek $1"
+#alias ssfc="sstc fire-creek"
+#function scfc { sctc fire-creek "$1"; }
+#export -f scfc
 
-alias ssfp="sstc fire-point"
-function scfp { sctc fire-point "$1"; }
-export -f scfp
+alias ssfp="ssts chinook fire-point"
+alias scfp="cscs chinook fire-point $1"
+#alias ssfp="sstc fire-point"
+#function scfp { sctc fire-point "$1"; }
+#export -f scfp
 
-function sccsn { scp "$1" innisfree:/cshome/ajallooe/copystore/; }
-export -f sccsn
+#function sccsn { scp "$1" innisfree:/cshome/ajallooe/copystore/; }
+#export -f sccsn
 
-alias cdwk="cd /Users/ajallooe/work"
-alias cdfg="cd /Users/ajallooe/work/Research/Go/Fuego/"
-alias cdex="cd /Users/ajallooe/work/exp/fuego/experiments"
-alias exfg="/Users/ajallooe/work/Research/Go/Fuego/fuegomain/fuego"
+alias cdwk="cd /Users/ajallooe/work/"
+alias cdfg="cd /Users/ajallooe/work/research/fuego/"
+alias cdex="cd /Users/ajallooe/work/research/fuego_remote/experiments/"
+alias exfg="/Users/ajallooe/work/research/fuego/fuegomain/fuego"
+
+alias gogui="/Users/ajallooe/work/research/gogui/gogui-1.4.9/bin/gogui"
+alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw"

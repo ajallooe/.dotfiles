@@ -33,7 +33,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'kien/ctrlp.vim'
@@ -55,7 +56,9 @@ Plugin 'tpope/vim-dispatch'
 " Plugin 'lox/vim-easytags'
 Plugin 'rking/ag.vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'edkolev/tmuxline.vim'
 Plugin 'benmills/vimux'
+Plugin 'lervag/vimtex'
 
 Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'flazz/vim-colorschemes'
@@ -179,10 +182,11 @@ set scrolloff=10        " scroll the window so we can always see 10 lines
 set spell spelllang=en_us
 set nospell
 
+" Default color scheme
+let base16colorspace=256  " Access colors present in 256 colorspace
+set t_Co=256 " 256 color mode
 set background=dark
 colorscheme base16-ocean
-set t_Co=256
-let base16colorspace=256  " Access colors present in 256 colorspace
 
 set exrc
 set secure
@@ -252,7 +256,7 @@ let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 "nnoremap <C-k> :<C-u>Unite -buffer-name=search -start-insert line<cr>
 
 let g:airline_powerline_fonts = 1
-
+let g:airline_theme='base16'
 set makeprg=make\ -j2
 
 nnoremap <silent> <Leader>b :TagbarToggle<CR>
@@ -267,3 +271,10 @@ noremap <leader>yy "*Y
 
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+
+" Vim Tmux Navigator
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
