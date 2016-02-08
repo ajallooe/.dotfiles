@@ -1,0 +1,7 @@
+#!/bin/sh
+
+function ssts {
+  local proxy="$1"
+  local server="$2"
+  ssh $proxy -t "ssh $server"
+}

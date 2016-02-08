@@ -1,0 +1,9 @@
+#!/bin/sh
+
+function cscss {
+  local proxyA="$1"
+  local proxyB="$2"
+  local server="$3"
+  local item="$4" 
+  ssh $proxyA -t "ssh proxyB -t \"ssh \"$server\" \"tar -cjf \"$item\" \"\"" | tar -xvjf; }
+}

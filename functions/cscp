@@ -1,0 +1,8 @@
+#!/bin/sh
+
+function cscp {
+  local server="$1"
+  local item="$2"
+  ssh $server "tar -cjf \"$item\"" | tar -xvjf; 
+}
+
