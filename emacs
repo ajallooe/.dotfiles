@@ -217,3 +217,8 @@
 ;; Correct NW appearance
 (custom-set-faces (if (not window-system) '(default ((t (:background
 "nil"))))))
+
+;; Set font (useful for GUI)
+(when (eq system-type 'darwin)
+  (set-face-attribute 'default nil :family "Input Mono Narrow" :height 140
+:weight 'extra-light))

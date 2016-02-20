@@ -6,4 +6,4 @@ your fonts with the inputCustomize.py command-line tool found in this package, o
 by re-downloading the fonts at <http://input.fontbureau.com/download>.
 
 
-	Line Height: 1.2×
+	Line Height: 1.7×
