@@ -143,10 +143,14 @@ alias exfg="/cshome/ajallooe/work/Research/Go/Fuego/fuegomain/fuego"
 
 through_chinook="gamebuilder fire-creek fire-point"
 if `is_in "$through_chinook" "$hostname"` ; then
-  alias cdex="cd /local/data/ajallooe/fuego/experiments"
+  alias cdex="cd /local/scratch/ajallooe/fuego/experiments"
 fi
 
 # Terminal colors
-export PS1="\n\[\033[36;1m\]\u\[\033[m\]@\[\033[32m\]\h\[\033[m\]:\[\033[33;1m\]\w\[\033[m\] \[\033[31m\]\D{%Y-%m-%d} \t\[\033[m\]\n\$ "
+export PS1="\n\n0----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----\n\[\033[91m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[93m\]\w\[\033[m\] [\[\033[95m\]\D{%Y-%m-%d}\[\033[m\]::\[\033[95m\]\t\[\033[m\]]\n\$ "
 LS_COLORS="di=1;34;40:ln=1;35;40:so=1;32;40:pi=1;31;40:ex=1;91;40:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:"
 export LS_COLORS
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-ocean.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+

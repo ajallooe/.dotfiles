@@ -15,6 +15,7 @@ alias ll='ls -GFlh'
 alias txe="open -a TextEdit"
 alias txm="open -a TextMate"
 alias mup="mupdf-x11"
+alias vim="vim --servername vim"
 
 autoload -U ssts cscs cscp
 

@@ -96,6 +96,7 @@ alias exfg="/Users/ajallooe/work/Research/Go/Fuego/fuegomain/fuego"
 
 # Terminal colors
 
-export PS1="\n\[\033[36;1m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\] \[\033[31m\]\D{%Y-%m-%d} \t\[\033[m\]\n\$ "
+export
+PS1="\n\n0----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----\n\[\033[91m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[93m\]\w\[\033[m\] [\[\033[95m\]\D{%Y-%m-%d}\[\033[m\]::\[\033[95m\]\t\[\033[m\]]\n\$ "
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
