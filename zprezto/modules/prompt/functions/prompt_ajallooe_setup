@@ -76,8 +76,8 @@ function prompt_ajallooe_setup {
 
   # Define prompts.
   PROMPT="
-%{${_prompt_ajallooe_colors[6]}%}Z%{%f%}----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----%{%f
-%{${_prompt_ajallooe_colors[3]}%n%f%}@%{${_prompt_ajallooe_colors[2]}%m%f%}:%{${_prompt_ajallooe_colors[5]}%~%f%} "'${vcs_info_msg_0_}'" %{%f%}[%{${_prompt_ajallooe_colors[6]}%D{%Y-%m-%d}%f%}::%{${_prompt_ajallooe_colors[6]}%*%f%}]
+ %(?,%{%F{black}%K{green}%}:),%{%F{black}%K{red}%}:()%{%f%k%}   [%{${_prompt_ajallooe_colors[6]}%}%D{%Y-%m-%d}%{%f%} %{${_prompt_ajallooe_colors[6]}%}%*%{%f%}]
+%{${_prompt_ajallooe_colors[3]}%}%n%{%f%}@%{${_prompt_ajallooe_colors[2]}%}%m%{%f%}:%{${_prompt_ajallooe_colors[5]}%}%~%{%f%} "'${vcs_info_msg_0_}'" %{%f%}
 "'$python_info[virtualenv]'"$ "
   RPROMPT=''
 }
