@@ -35,4 +35,6 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 export FUEGO="/Users/ajallooe/work/research/fuego/build/dbg/fuegomain/fuego"
 export TWOGTP="/Users/ajallooe/work/research/gogui/gogui-1.4.9/bin/gogui-twogtp"
+export GOSTAT="/Users/ajallooe/work/research/gogui/gogui-1.4.9/bin/gogui-statistics"
+export GOUTIL="/Users/ajallooe/work/research/gogui/gogui-1.4.9/bin/"
 export GNUGO38="/usr/local/bin/gnugo"
