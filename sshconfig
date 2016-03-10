@@ -20,6 +20,22 @@ Host chinook
    User ajallooe
    Hostname chinook.cs.ualberta.ca
 
+Host muriel
+   User ajallooe
+   Hostname muriel.cs.ualberta.ca
+
+Host muriel1
+   User ajallooe
+   Hostname muriel1.cs.ualberta.ca
+
+Host muriel-c1
+   User ajallooe
+   Hostname muriel-c1.cs.ualberta.ca
+
+Host willingdon
+   User ajallooe
+   Hostname willingdon.cs.ualberta.ca
+
 Host cs
    User ajallooe
    Hostname chinook.cs.ualberta.ca

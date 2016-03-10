@@ -33,6 +33,12 @@ alias ssif="ssh innisfree"
 #function scch { ssh innisfree -t "ssh chinook \"tar -cjf \"$1\" \"" | tar -xvjf; }
 #export -f scch
 
+alias sswd="ssh willingdon"
+
+alias ssmr="ssh muriel"
+
+alias ssm1="ssh muriel1"
+
 alias sscn="ssh chinook"
 #function scif { ssh innisfree "tar -cjf \"$1\"" | tar -xvjf; }
 #export -f scif
@@ -61,6 +67,12 @@ alias scfc="cscs chinook fire-creek $1"
 
 alias ssfp="ssts chinook fire-point"
 alias scfp="cscs chinook fire-point $1"
+#alias ssfp="sstc fire-point"
+#function scfp { sctc fire-point "$1"; }
+#export -f scfp
+
+alias ssmc="ssts chinook muriel-c1"
+alias scmc="cscs chinook muriel-c1 $1"
 #alias ssfp="sstc fire-point"
 #function scfp { sctc fire-point "$1"; }
 #export -f scfp

@@ -43,10 +43,14 @@ Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/a.vim'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'godlygeek/tabular'
+Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
-Plugin 'fholgado/vim-autoclose'
+"Plugin 'fholgado/vim-autoclose'
 Plugin 'kana/vim-operator-user'
 Plugin 'weynhamz/vim-plugin-minibufexpl'
 Plugin 'sjl/gundo.vim'
@@ -204,6 +208,8 @@ else
 endif
 
 inoremap jj <ESC>
+
+let g:ycm_collect_identifiers_from_tags_files = 1
 
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']

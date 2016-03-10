@@ -124,6 +124,9 @@ alias ll="ls --color=always -Flh"
 alias ssif="ssh innisfree"
 alias ssoh="ssh ohaton"
 alias sscn="ssh chinook"
+alias sswd="ssh willingdon"
+alias ssmr="ssh muriel"
+alias ssm1="ssh muriel1"
 function sstc { ssh chinook -t \"ssh "$1"\"; }
 export -f sstc
 with_chinook="chinook gamebuilder fire-creek fire-point"
@@ -132,10 +135,12 @@ if `is_in "$with_chinook" "$hostname"` ; then
   alias ssgb="ssh gamebuilder"
   alias ssfc="ssh fire-creek"
   alias ssfp="ssh fire-point"
+  alias ssmc="ssh muriel-c1"
 else
   alias ssgb="sstc gamebuilder"
   alias ssfc="sstc fire-creek"
   alias ssfp="sstc fire-point"
+  alias ssmc="sstc muriel-c1"
 fi
 
 alias cdfg="cd /cshome/ajallooe/work/Research/Go/Fuego/"

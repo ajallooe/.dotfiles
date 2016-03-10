@@ -13,6 +13,8 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install macvim --with-override-system-vim 
 brew install zsh tmux Caskroom/cask/iterm2 cmake ctags git fasd autojump
 
+git config --global credential.helper osxkeychain
+
 mkdir ~/.zprezto
 
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
@@ -111,3 +113,8 @@ fi
 brew linkapps
 
 # install SauceCodePro, Set iTerm, MacVim font
+
+# Generate Ctags
+# ctags -R .
+
+open iTermColorsToTerminalColors.swift
