@@ -130,6 +130,7 @@ alias ssm1="ssh muriel1"
 function sstc { ssh chinook -t \"ssh "$1"\"; }
 export -f sstc
 with_chinook="chinook gamebuilder fire-creek fire-point"
+devel_server="chinook gamebuilder fire-creek fire-point willingdon muriel muriel1 muriel-c1"
 #alias ssgb="ssh chinook -t \"ssh gamebuilder\""
 if `is_in "$with_chinook" "$hostname"` ; then
   alias ssgb="ssh gamebuilder"
@@ -137,6 +138,7 @@ if `is_in "$with_chinook" "$hostname"` ; then
   alias ssfp="ssh fire-point"
   alias ssmc="ssh muriel-c1"
 else
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/boost_1_53_0/lib
   alias ssgb="sstc gamebuilder"
   alias ssfc="sstc fire-creek"
   alias ssfp="sstc fire-point"
@@ -147,7 +149,7 @@ alias cdfg="cd /cshome/ajallooe/work/Research/Go/Fuego/"
 alias exfg="/cshome/ajallooe/work/Research/Go/Fuego/fuegomain/fuego"
 
 through_chinook="gamebuilder fire-creek fire-point"
-if `is_in "$through_chinook" "$hostname"` ; then
+if `is_in "$devel_server" "$hostname"` ; then
   alias cdex="cd /local/scratch/ajallooe/fuego/experiments"
 fi
 

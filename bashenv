@@ -1,0 +1,5 @@
+
+export -f is_in
+
+source ~/.dotfiles/env
+

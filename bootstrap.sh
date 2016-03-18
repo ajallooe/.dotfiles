@@ -85,7 +85,7 @@ brew cask install textmate eclipse-ide xmind libreoffice
 
 brew cask install mactex texshop latexit
 
-brew cask install tunnelblick xquartz caffeine atom seil
+brew cask install tunnelblick xquartz caffeine atom seil dos2unix
 brew install gnuplot --with-x11
 
 brew install homebrew/games/gnu-go homebrew/games/go-gui homebrew/games/fuego
