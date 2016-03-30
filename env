@@ -22,10 +22,11 @@ export PS1="\n\[\033[36;1m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
-export FUEGO="/Users/ajallooe/work/research/fuego/build/dbg/fuegomain/fuego"
-export TWOGTP="/Users/ajallooe/work/research/gogui/gogui-1.4.9/bin/gogui-twogtp"
-export GOSTAT="/Users/ajallooe/work/research/gogui/gogui-1.4.9/bin/gogui-statistics"
-export GOUTIL="/Users/ajallooe/work/research/gogui/gogui-1.4.9/bin/"
+export FUEGODIR="/Users/ajallooe/work/research/fuego/build/dbg/fuegomain"
+export FUEGO="$FUEGODIR/fuego"
+export GOUTILDIR="/Users/ajallooe/work/research/gogui/gogui-1.4.9/bin"
+export TWOGTP="$GOUTILDIR/gogui-twogtp"
+export GOSTAT="$GOUTILDIR/gogui-statistics"
 export GNUGO38="/usr/local/bin/gnugo"
 
 export CSR="https://repos.cs.ualberta.ca/repos"
