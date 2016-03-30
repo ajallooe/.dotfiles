@@ -145,13 +145,21 @@ else
   alias ssmc="sstc muriel-c1"
 fi
 
-alias cdfg="cd /cshome/ajallooe/work/Research/Go/Fuego/"
-alias exfg="/cshome/ajallooe/work/Research/Go/Fuego/fuegomain/fuego"
-
 through_chinook="gamebuilder fire-creek fire-point"
 if `is_in "$devel_server" "$hostname"` ; then
-  alias cdex="cd /local/scratch/ajallooe/fuego/experiments"
+  export FUEGODIR="/local/scratch/ajallooe/fuego"
+  export GOUTILDIR="/local/scratch/ajallooe/gogui-1.4.9/bin"
+  export TWOGTP="$GOUTILDIR/gogui-twogtp"
+  export GOSTAT="$GOUTILDIR/gogui-statistics"
+  export GNUGO38="/usr/local/bin/gnugo"
+  alias cdex="cd $FUEGODIR/experiments"
+else
+  export FUEGODIR="/cshome/ajallooe/work/Research/Go/Fuego"
 fi
+export FUEGO="$FUEGODIR/fuegomain/fuego"
+
+alias cdfg="cd $FUEGODIR/"
+alias exfg="$FUEGO"
 
 # Terminal colors
 export PS1="\n BASH [\[\033[95m\]\D{%Y-%m-%d}\[\033[m\] \[\033[95m\]\t\[\033[m\]]\n\[\033[91m\]\u\[\033[m\]@\[\033[32m\]\h\[\033[m\]:\[\033[93m\]\w\[\033[m\]\n\$ "
@@ -160,4 +168,7 @@ export LS_COLORS
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-ocean.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+export CSR="https://repos.cs.ualberta.ca/repos"
+export CSRA="https://repos.cs.ualberta.ca/repos/ajallooe"
 
