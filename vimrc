@@ -31,11 +31,15 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'user/L9', {'name': 'newL9'}
 
 Plugin 'ervandew/supertab'
-Plugin 'Valloric/YouCompleteMe'
+if v:version >= 704
+    Plugin 'Valloric/YouCompleteMe'
+endif
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'SirVer/ultisnips'
+if v:version >= 704
+    Plugin 'SirVer/ultisnips'
+endif
 Plugin 'honza/vim-snippets'
 Plugin 'kien/ctrlp.vim'
 "Plugin 'Shougo/unite.vim'
