@@ -1,0 +1,95 @@
+#!/bin/bash
+
+function init_latexmk_inc() {
+
+
+    cat > $1.tex <<EOF
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel} 
+\usepackage{fullpage}
+\usepackage{todonotes}
+\usepackage{paralist}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{nicefrac}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[displaymath,mathlines]{lineno}
+
+\newcommand{\Input}[1]{\textbf{Input:}\;#1}
+\newcommand{\Output}[1]{\textbf{Output:}\;#1}
+\newcommand{\NumRange}[2]{#1\;..\;#2}
+
+\providecommand{\keywords}[1]{\textbf{Keywords:} #1}
+
+\author{Mohammad~M. Ajallooeian}
+\affil{Department of Computing Science, University of Alberta}
+
+\title{$2}
+
+\begin{document}
+    
+    \maketitle
+    
+    \linenumbers
+    \begin{abstract}
+        ...
+
+        \keywords{...}
+    \end{abstract}
+
+    \section{...}
+        ...
+    
+    \bibliographystyle{unsrtnat}
+    \bibliography{$1}
+    
+\end{document}
+
+EOF
+    
+    touch $1.bib
+
+    mkdir include
+    cat > include/generate.sh <<EOF
+#!/bin/bash
+
+
+EOF
+    chmod +x include/generate.sh
+
+    cat > Makefile <<EOF
+.PHONY: all cleanincludes cleantex clean
+
+all: $1.pdf
+
+$1.pdf: $1.tex includes
+	latexmk -bibtex-cond -pdf -pdflatex="pdflatex -synctex=1 -interactive=nonstopmode" -use-make $1.tex
+
+includes: include/generate.sh
+	cd include; sh generate.sh	
+	cd ..
+
+cleanincludes:
+	rm -f include/*.pdf
+	rm -f include/*.tex
+	rm -f includes
+
+cleantex:
+	latexmk -CA
+
+clean: | cleantex cleanincludes
+
+EOF
+}
+
