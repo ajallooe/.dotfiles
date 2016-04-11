@@ -113,7 +113,7 @@ if [ "$(uname)" == "Darwin" ] ; then
     fi
     brew linkapps
 
-    # install SauceCodePro, Set iTerm, MacVim font
+    # install Input Mono, Set iTerm, MacVim font
 
     # Generate Ctags
     # ctags -R .
@@ -240,7 +240,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ] && [ "$dist" == "Ubuntu" ] 
     # install Dropbox App
 
     sudo apt-get install grive
-    # brew cask install skype dropbox github-desktop sourcetree flash-player adobe-reader telegram viber shiftit electric-sheep
+    # install skype, dropbox flash-player adobe-reader electric-sheep
 
     sudo apt-get install xscreensaver
 
@@ -251,7 +251,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ] && [ "$dist" == "Ubuntu" ] 
       export DISPLAY=:0.0
     fi
 
-    # install SauceCodePro, Set gnome-terminal, gvim font
+    # install input mono, Set gnome-terminal, gvim font
 
     # Generate Ctags
     # ctags -R .
