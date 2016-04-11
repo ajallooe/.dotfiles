@@ -132,7 +132,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ] && [ "$dist" == "Ubuntu" ] 
     sudo apt-get install gnome-shell
     sudo apt-get install chromium-browser
     sudo apt-get install vim-gnome
-    sudo apt-get install zsh tmux git
+    sudo apt-get install zsh tmux git subversion
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
     sudo apt-get install cmake exuberant-ctags autojump
     git clone https://github.com/clvv/fasd.git ~/Downloads/fasd
