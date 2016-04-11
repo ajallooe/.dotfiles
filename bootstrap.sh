@@ -166,6 +166,11 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ] && [ "$dist" == "Ubuntu" ] 
     ln -s ~/.dotfiles/profile ~/.profile
     ln -s ~/.dotfiles/secrets ~/.secrets
 
+    sudo apt-get install libgnome-keyring-dev
+    cd /usr/share/doc/git/contrib/credential/gnome-keyring
+    sudo make
+    git config --global credential.helper /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+
     sudo apt-get install python-dev python3-dev
 
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
