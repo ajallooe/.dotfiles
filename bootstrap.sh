@@ -67,10 +67,18 @@ if [ "$(uname)" == "Darwin" ] ; then
     brew install numpy --with-openblas
     brew install scipy --with-openblas
     brew install matplotlib
+    brew install qt
+    brew install pyqt
+    brew install --python --qt vtk
+    brew install wxmac
     brew install zmq
     pip install pylab
     pip install ipython
     pip install notebook
+    pip install networkx
+    pip install configobj
+    pip install envisage
+    pip install mayavi
 
     brew install pyenv
     pyenv install 2.7.10
@@ -88,6 +96,8 @@ if [ "$(uname)" == "Darwin" ] ; then
 
     brew cask install tunnelblick xquartz caffeine atom seil dos2unix
     brew install gnuplot --with-x11
+
+    brew install doxygen
 
     brew install homebrew/games/gnu-go homebrew/games/go-gui homebrew/games/fuego
 
