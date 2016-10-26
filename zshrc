@@ -96,6 +96,9 @@ bindkey -M vicmd "q" push-line
 # it's like, space AND completion.  Gnarlbot.
 bindkey -M viins ' ' magic-space
 
+# pip should only run if there is a virtualenv currently activated
+export PIP_REQUIRE_VIRTUALENV=true
+
 ### Old oh-my-zsh configs
 
 # Look in ~/.oh-my-zsh/themes/
@@ -207,3 +210,5 @@ ssh() {
     command ssh "$@"
     settitle "zsh"
 }
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

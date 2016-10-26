@@ -80,6 +80,11 @@ alias scmc="cscs chinook muriel-c1 $1"
 #function sccsn { scp "$1" innisfree:/cshome/ajallooe/copystore/; }
 #export -f sccsn
 
+alias sscy="ssh -i ~/.ssh/rapid_access_cloud/ajallooe.pem cy"
+alias sccy="scp -i ~/.ssh/rapid_access_cloud/ajallooe.pem $1 $2"
+alias sscr="ssh -i ~/.ssh/cirrus/ajallooe.pem cr"
+alias sccr="scp -i ~/.ssh/cirrus/ajallooe.pem $1 $2"
+
 alias cdwk="cd /Users/ajallooe/work/"
 alias cdfg="cd /Users/ajallooe/work/research/fuego/"
 alias cdex="cd /Users/ajallooe/work/research/fuego_remote/experiments/"

@@ -40,3 +40,11 @@ Host cs
    User ajallooe
    Hostname chinook.cs.ualberta.ca
 
+Host cy
+   User ubuntu
+   Hostname 199.116.235.225
+
+Host cr
+   User ubuntu
+   Hostname 142.244.87.218
+

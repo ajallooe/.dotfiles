@@ -79,8 +79,10 @@ if [ "$(uname)" == "Darwin" ] ; then
     pip install configobj
     pip install envisage
     pip install mayavi
+    pip install virtualenv
+    pip install virtualenvwrapper
 
-    brew install pyenv
+    brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper
     pyenv install 2.7.10
     pyenv install 3.5.0
 
@@ -129,6 +131,8 @@ if [ "$(uname)" == "Darwin" ] ; then
     # ctags -R .
 
     open iTermColorsToTerminalColors.swift
+
+    #install tensorflow with bazel
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ] && [ "$dist" == "Ubuntu" ] ; then
     sudo apt-get update
     sudo apt-get upgrade
@@ -204,6 +208,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ] && [ "$dist" == "Ubuntu" ] 
     pip install pylab
     pip install ipython
     pip install notebook
+    pip install virtualenv virtualenvwrapper
 
     sudo apt-get install -y build-essential libssl-dev zlib1g-dev
     libbz2-dev libreadline-dev libsqlite3-dev curl llvm
@@ -265,5 +270,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ] && [ "$dist" == "Ubuntu" ] 
 
     # Generate Ctags
     # ctags -R .
+
+    #install tensorflow with bazel
 
 fi

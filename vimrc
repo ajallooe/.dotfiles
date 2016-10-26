@@ -160,8 +160,8 @@ map <F10> :nohlsearch<CR>   " Temporarily disable highlighting, re-enabled for
 
 " Tab and indent handling
 set smarttab
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 set tabstop=8
 set expandtab
 
@@ -189,6 +189,8 @@ set scrolloff=10        " scroll the window so we can always see 10 lines
                         " around the cursor
 set spell spelllang=en_us
 set nospell
+
+let g:gitgutter_max_signs=9999
 
 " Default color scheme
 let base16colorspace=256  " Access colors present in 256 colorspace
