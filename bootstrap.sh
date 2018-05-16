@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+#cd ~
+#git clone https://github.com/ajallooe/.dotfiles.git
+#cd .dotfiles
+
 if [ "$(uname)" == "Darwin" ] ; then
     # install command line tools
     xcode-select --install
@@ -11,8 +15,10 @@ if [ "$(uname)" == "Darwin" ] ; then
 
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-    brew install macvim --with-override-system-vim 
-    brew install zsh tmux Caskroom/cask/iterm2 cmake ctags git fasd autojump
+    brew install macvim --with-override-system-vim
+    brew install zsh tmux
+    brew cask install iterm2
+    brew install cmake ctags git fasd autojump
 
     git config --global credential.helper osxkeychain
 
@@ -51,43 +57,56 @@ if [ "$(uname)" == "Darwin" ] ; then
 
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+    git clone https://github.com/chriskempson/base16-iterm2 ~/.iterm2/base16
+
     vim +PluginInstall +qall
 
     cd ~/.vim/bundle/YouCompleteMe
     ./install.py --clang-completer
     cd ~/.dotfiles
 
-    git clone https://github.com/chriskempson/base16-iterm2 ~/.iterm2/base16
-
-    brew install caskroom/cask/brew-cask
     brew install gdb ssh-copy-id wget watch source-highlight ag reattach-to-user-namespace
 
     brew install python
-    brew tap homebrew/python
-    brew install numpy --with-openblas
-    brew install scipy --with-openblas
-    brew install matplotlib
-    brew install qt
-    brew install pyqt
-    brew install --python --qt vtk
-    brew install wxmac
-    brew install zmq
-    pip install pylab
-    pip install ipython
-    pip install notebook
-    pip install networkx
-    pip install configobj
-    pip install envisage
-    pip install mayavi
-    pip install virtualenv
-    pip install virtualenvwrapper
+    brew install python@2
+    python3 -c "import ssl; print(ssl.OPENSSL_VERSION)"
+    python2 -c "import ssl; print(ssl.OPENSSL_VERSION)"
+    pip3 install --upgrade pip setuptools wheel
+    pip2 install --upgrade pip setuptools wheel
+    pip3 install virtualenv virtualenvwrapper
+    pip2 install virtualenv virtualenvwrapper
+    source ~/.profile
+    brew install qt5
+    brew install sip
+    brew install pyqt5
+    brew cask install qt-creator
+    brew install pkg-config libpng freetype
+    brew tap caskroom/fonts
+    brew cask install font-input font-source-code-pro
+    mkvirtualenv --python=/usr/local/bin/python3 sci
+    pip3 install numpy scipy matplotlib pandas sympy nose
+    pip3 install jupyter
+    pip3 install ipython[all]
+    pip3 install pandoc
+    #jupyter qtconsole --ConsoleWidget.font_family="Source Code Pro" --ConsoleWidget.font_size=14
+    pip3 install tensorflow
+    #brew install --python --qt vtk
+    3brew install wxmac
+    #brew install zmq
+    #pip install pylab
+    #pip install networkx
+    #pip install configobj
+    #pip install envisage
+    #pip install mayavi
 
-    brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper
-    pyenv install 2.7.10
-    pyenv install 3.5.0
+    #brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper
+    #pyenv install 2.7.10
+    #pyenv install 3.5.0
 
     brew cask install java firefox zotero keepassx sublime-text
     brew install emacs --with-cocoa
+
+    brew cask install shiftit
 
     # install vimperator
     # install JDK
@@ -96,26 +115,39 @@ if [ "$(uname)" == "Darwin" ] ; then
 
     brew cask install mactex texshop latexit
 
-    brew cask install tunnelblick xquartz caffeine atom seil dos2unix
+    #brew cask install tunnelblick seil 
+    brew install dos2unix
+    brew cask install xquartz caffeine atom flux karabiner-elements
+    brew cask install vlc alfred little-snitch transmit
+    brew cask alfred link
+    brew cask install thefuck
+    apm install sync-settings
+
     brew install gnuplot --with-x11
 
     brew install doxygen
 
-    brew install homebrew/games/gnu-go homebrew/games/go-gui homebrew/games/fuego
+    #brew install homebrew/games/gnu-go homebrew/games/go-gui homebrew/games/fuego
+    brew install gnu-go go-gui fuego
 
     brew install ghc
     brew install cabal-install
     cabal update
 
     # install Chromecast
-    # install Chrome Apps
     # install Adobe Reader
+    brew cask install adobe-acrobat-reader
+    brew cask install google-backup-and-sync skype telegram-desktop google-chrome
     # install Google Drive App
     # install Dropbox App
+    # install Alberta Cisco AnyConnect
 
-    brew cask install skype google-drive dropbox github-desktop sourcetree flash-player adobe-reader telegram viber shiftit electric-sheep
+    #brew cask install skype google-drive
+    brew cask install dropbox flash-player
+    brew cask install github-desktop sourcetree
+    #brew cask install viber electric-sheep
 
-    brew install Caskroom/cask/xscreensaver
+    brew cask install xscreensaver
 
 
     ln -s ~/.dotfiles/sshconfig ~/.ssh/config
@@ -124,6 +156,7 @@ if [ "$(uname)" == "Darwin" ] ; then
       export DISPLAY=:0.0
     fi
     brew linkapps
+    brew cleanup
 
     # install Input Mono, Set iTerm, MacVim font
 
