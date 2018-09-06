@@ -54,6 +54,7 @@ if [ "$(uname)" == "Darwin" ] ; then
     #ln -s ~/.dotfiles/emacs ~/.emacs
     ln -s ~/.dotfiles/profile ~/.profile
     ln -s ~/.dotfiles/secrets ~/.secrets
+    ln -s ~/.dotfiles/zprezto ~/.zprezto
 
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
