@@ -73,7 +73,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'tomasr/molokai'
 Plugin 'sickill/vim-monokai'
 Plugin 'w0ng/vim-hybrid'
-" Plugin 'chriskempson/base16-vim'
+Plugin 'chriskempson/base16-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -193,14 +193,15 @@ set nospell
 let g:gitgutter_max_signs=9999
 
 " Default color scheme
-" let base16colorspace=256  " Access colors present in 256 colorspace
-set t_Co=256 " 256 color mode
-set background=dark
+let base16colorspace=256  " Access colors present in 256 colorspace
 " let g:solarized_termcolors=256
 " let g:solarized_termtrans = 1
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
-colorscheme solarized
+set t_Co=256 " 256 color mode
+set background=dark
+" let g:solarized_visibility = "high"
+" let g:solarized_contrast = "high"
+colorscheme base16-ocean
+" colorscheme solarized
 
 set exrc
 set secure
@@ -272,8 +273,8 @@ let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 "nnoremap <C-k> :<C-u>Unite -buffer-name=search -start-insert line<cr>
 
 let g:airline_powerline_fonts = 1
-" let g:airline_theme='base16'
-let g:airline_theme='solarized'
+let g:airline_theme='base16'
+" let g:airline_theme='solarized'
 
 set makeprg=make\ -j2
 

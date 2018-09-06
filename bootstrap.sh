@@ -214,6 +214,9 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ] && [ "$dist" == "Ubuntu" ] 
     ln -s ~/.dotfiles/profile ~/.profile
     ln -s ~/.dotfiles/secrets ~/.secrets
 
+    cd ~/.dotfiles
+    git clone https://github.com/chriskempson/base16-iterm2.git
+
     sudo apt-get install libgnome-keyring-dev
     cd /usr/share/doc/git/contrib/credential/gnome-keyring
     sudo make
