@@ -1,3 +1,6 @@
+# Terminal
+
+export TERM="xterm-256color"
 
 # Editor
 export EDITOR="vim"
@@ -8,7 +11,7 @@ export PATH=$homebrew:$PATH
 
 export ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future
 
-export PATH="/Users/ajallooe/settings:$PATH" 
+export PATH="/Users/ajallooe/settings:$PATH"
 #export PYTHONPATH=/usr/local/lib/python3.4/site-packages:/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s" # for OSX
@@ -35,4 +38,3 @@ export GNUGO38="/usr/local/bin/gnugo"
 
 export CSR="https://repos.cs.ualberta.ca/repos"
 export CSRA="https://repos.cs.ualberta.ca/repos/ajallooe"
-

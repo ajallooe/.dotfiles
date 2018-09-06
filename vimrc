@@ -58,7 +58,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kana/vim-operator-user'
 Plugin 'weynhamz/vim-plugin-minibufexpl'
 Plugin 'sjl/gundo.vim'
-Plugin 'edsono/vim-matchit'
+" Plugin 'edsono/vim-matchit'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'tpope/vim-dispatch'
 " Plugin 'lox/vim-easytags'
@@ -73,7 +73,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'tomasr/molokai'
 Plugin 'sickill/vim-monokai'
 Plugin 'w0ng/vim-hybrid'
-Plugin 'chriskempson/base16-vim'
+" Plugin 'chriskempson/base16-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -83,10 +83,10 @@ call vundle#end()            " required
 "
 " Brief help
 " :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update 
+" :PluginInstall    - installs plugins; append `!` to update
 "                     or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to 
+" :PluginClean      - confirms removal of unused plugins; append `!` to
 "                     auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
@@ -104,21 +104,21 @@ let g:ycm_confirm_extra_conf = 0
 
 
 " Misc
-set hidden               " Make buffer hidden (instead of unloaded) when 
+set hidden               " Make buffer hidden (instead of unloaded) when
                          " changing buffers. AT LAST
                          " undo history is not lost on :edit or :bnext
 
 set modeline            " allow per-file settings via modeline
 set showmatch           " Show matching brackets.
 set wrap                " Enable dynamic wrapping
-set linebreak           " Display dynamic wrapping linebreaks 
-set display=uhex   
+set linebreak           " Display dynamic wrapping linebreaks
+set display=uhex
 set ruler               " show cursor position in status bar
 set number              " show absolute line number of the current line
 set numberwidth=4
 set cursorline
 map <F12> :b #<CR>      " Jump to alternate buffer
-set pastetoggle=<F11>   " Go in paste mode (no more autoindent, very useful 
+set pastetoggle=<F11>   " Go in paste mode (no more autoindent, very useful
                         " when pasting with mouse)
 set encoding=utf-8      " default to UTF-8 for editing
 set fileencoding=utf-8  " saving and encoding
@@ -151,11 +151,11 @@ set backspace=indent,start,eol
 
 " Search
 set ignorecase          " Do case insensitive matching
-set smartcase           " Fall back to case sensitive if search pattern has an 
+set smartcase           " Fall back to case sensitive if search pattern has an
                         " upper case character
 set incsearch           " Incremental search
-set hlsearch            " Highlight search 
-map <F10> :nohlsearch<CR>   " Temporarily disable highlighting, re-enabled for 
+set hlsearch            " Highlight search
+map <F10> :nohlsearch<CR>   " Temporarily disable highlighting, re-enabled for
                             " the next search
 
 " Tab and indent handling
@@ -173,7 +173,7 @@ set statusline=%f\ %h%r\ %=%l/%L,%c%10.n%5.P
 set statusline=%-40.40f%<\ [%.20{getcwd()}]%h%r\ %=%l/%L,%c%10.n%14.PM
 
 " Save and restore last position in buffer
-:au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | 
+:au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") |
             \ exe "normal g'\"" | endif
 
 " Ignore whitespace changes by default in diff
@@ -193,10 +193,14 @@ set nospell
 let g:gitgutter_max_signs=9999
 
 " Default color scheme
-let base16colorspace=256  " Access colors present in 256 colorspace
+" let base16colorspace=256  " Access colors present in 256 colorspace
 set t_Co=256 " 256 color mode
 set background=dark
-colorscheme base16-ocean
+" let g:solarized_termcolors=256
+" let g:solarized_termtrans = 1
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+colorscheme solarized
 
 set exrc
 set secure
@@ -246,12 +250,12 @@ map <C-I> :pyf path_to_clang_format/clang-format.py<CR>
 imap <C-I> <ESC>:pyf path_to_clang_format/clang-format.py<CR>i
 
 " Set minibufexplorer keys
-let g:miniBufExplMapWindowNavVim = 1 
+let g:miniBufExplMapWindowNavVim = 1
 
 if executable('ag')
       " Use Ag over Grep
       set grepprg=ag\ --nogroup\ --nocolor
-       
+
       " Use ag in CtrlP for listing files. Lightning fast and respects
       " .gitignore
       let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -263,12 +267,14 @@ let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 
 "call unite#filters#matcher_default#use(['matcher_fuzzy'])
 "call unite#filters#sorter_default#use(['sorter_rank'])
-"call unite#custom#source('file,file/new,buffer,file_rec,line', 'matchers', 
+"call unite#custom#source('file,file/new,buffer,file_rec,line', 'matchers',
             "\ 'matcher_fuzzy')
 "nnoremap <C-k> :<C-u>Unite -buffer-name=search -start-insert line<cr>
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme='base16'
+" let g:airline_theme='base16'
+let g:airline_theme='solarized'
+
 set makeprg=make\ -j2
 
 nnoremap <silent> <Leader>b :TagbarToggle<CR>
@@ -289,4 +295,3 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-

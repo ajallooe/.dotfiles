@@ -115,7 +115,7 @@ if [ "$(uname)" == "Darwin" ] ; then
 
     brew cask install mactex texshop latexit
 
-    #brew cask install tunnelblick seil 
+    #brew cask install tunnelblick seil
     brew install dos2unix
     brew cask install xquartz caffeine atom flux karabiner-elements
     brew cask install vlc alfred little-snitch transmit
@@ -250,7 +250,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ] && [ "$dist" == "Ubuntu" ] 
     pyenv install 2.7.10
     pyenv install 3.5.0
 
-    brew cask install default-jdk firefox 
+    brew cask install default-jdk firefox
     wget https://raw.github.com/smathot/zotero_installer/master/zotero_installer.sh -O /tmp/zotero_installer.sh
     chmod +x /tmp/zotero_installer.sh
     /tmp/zotero_installer.sh
@@ -274,7 +274,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ] && [ "$dist" == "Ubuntu" ] 
     rm -f ~/Downloads.atom.deb
     sudo apt-get install gnuplot-x11
 
-    sudo apt-get install gnugo 
+    sudo apt-get install gnugo
     # install GoGui, Fuego
 
     sudo apt-get install ghc
