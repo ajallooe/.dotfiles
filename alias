@@ -91,11 +91,7 @@ alias cdfg="cd /Users/ajallooe/work/research/fuego/"
 alias cdex="cd /Users/ajallooe/work/research/fuego_remote/experiments/"
 alias exfg="/Users/ajallooe/work/research/fuego/fuegomain/fuego"
 
-if [ "$(uname)" == "Darwin" ] ; then
-    alias fgdoc="open $FUEGODOCHTML"
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ] && [ "$dist" == "Ubuntu" ] ; then
-    alias fgdoc="firefox $FUEGODOCHTML"
-fi
+alias fgdoc="firefox $FUEGODOCHTML"
 
 alias gogui="/Users/ajallooe/work/research/gogui/gogui-1.4.9/bin/gogui"
 alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw"
