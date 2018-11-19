@@ -13,10 +13,10 @@ if [ "$(uname)" == "Darwin" ] ; then
 
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-    brew cask install iterm2 google-chrome
+    brew cask install iterm2 google-chrome keepassx google-backup-and-sync
     brew install macvim --with-override-system-vim
     
-    # log in to Google Chrome
+    # log in to Google Chrome, Backup and Sync
     
     brew install zsh tmux
 
@@ -104,7 +104,7 @@ if [ "$(uname)" == "Darwin" ] ; then
     #pyenv install 2.7.10
     #pyenv install 3.5.0
 
-    brew cask install java firefox zotero keepassx sublime-text
+    brew cask install java firefox zotero sublime-text
     brew install emacs --with-cocoa
 
     brew cask install shiftit
