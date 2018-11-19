@@ -5,9 +5,11 @@
 #cd .dotfiles
 
 if [ "$(uname)" == "Darwin" ] ; then
-    # update macOs, install Xcode, command line tools
+    # update macOS, install Xcode, command line tools
     sudo xcodebuild -license
     xcode-select --install
+    
+    git config --global credential.helper osxkeychain
 
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -19,8 +21,6 @@ if [ "$(uname)" == "Darwin" ] ; then
     brew install zsh tmux
 
     brew install cmake ctags git fasd autojump
-
-    git config --global credential.helper osxkeychain
 
     mkdir ~/.zprezto
 
