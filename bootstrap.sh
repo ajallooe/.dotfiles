@@ -104,7 +104,8 @@ if [ "$(uname)" == "Darwin" ] ; then
     #pyenv install 2.7.10
     #pyenv install 3.5.0
 
-    brew cask install java firefox zotero sublime-text
+    brew cask install java firefox zotero atom
+    #brew cask install sublime-text textmate
     brew install emacs --with-cocoa
 
     brew cask install shiftit
@@ -112,13 +113,16 @@ if [ "$(uname)" == "Darwin" ] ; then
     # install vimperator
     # install JDK
 
-    brew cask install textmate eclipse-ide xmind libreoffice
+    brew cask install eclipse-ide xmind libreoffice
 
     brew cask install mactex texshop latexit
+    
+    # install Cisco mobility client and set up UAlberta VPN
+    # set up department printers
 
     #brew cask install tunnelblick seil
     brew install dos2unix
-    brew cask install xquartz caffeine atom flux karabiner-elements
+    brew cask install xquartz caffeine flux karabiner-elements
     brew cask install vlc alfred little-snitch transmit
     brew cask alfred link
     brew cask install thefuck
