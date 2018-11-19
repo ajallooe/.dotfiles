@@ -92,7 +92,7 @@ if [ "$(uname)" == "Darwin" ] ; then
     #jupyter qtconsole --ConsoleWidget.font_family="Source Code Pro" --ConsoleWidget.font_size=14
     pip3 install tensorflow
     #brew install --python --qt vtk
-    3brew install wxmac
+    brew install wxmac
     #brew install zmq
     #pip install pylab
     #pip install networkx
