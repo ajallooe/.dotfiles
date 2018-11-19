@@ -5,19 +5,19 @@
 #cd .dotfiles
 
 if [ "$(uname)" == "Darwin" ] ; then
-    # install command line tools
-    xcode-select --install
-
-    # install XCode
+    # update macOs, install Xcode, command line tools
     sudo xcodebuild -license
-
-    # install Google Chrome
+    xcode-select --install
 
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+    brew cask install iterm2 google-chrome
     brew install macvim --with-override-system-vim
+    
+    # log in to Google Chrome
+    
     brew install zsh tmux
-    brew cask install iterm2
+
     brew install cmake ctags git fasd autojump
 
     git config --global credential.helper osxkeychain
