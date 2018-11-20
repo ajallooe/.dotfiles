@@ -124,7 +124,7 @@ if [ "$(uname)" == "Darwin" ] ; then
     brew install dos2unix
     brew cask install xquartz caffeine flux karabiner-elements
     brew cask install vlc alfred little-snitch transmit
-    brew cask alfred link
+    #brew cask alfred link
     brew install thefuck
     apm install sync-settings
 
@@ -161,7 +161,6 @@ if [ "$(uname)" == "Darwin" ] ; then
     then
       export DISPLAY=:0.0
     fi
-    brew linkapps
     brew cleanup
 
     # install Input Mono, Set iTerm, MacVim font
@@ -169,7 +168,7 @@ if [ "$(uname)" == "Darwin" ] ; then
     # Generate Ctags
     # ctags -R .
 
-    open iTermColorsToTerminalColors.swift
+    # open iTermColorsToTerminalColors.swift
 
     #install tensorflow with bazel
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ] && [ "$dist" == "Ubuntu" ] ; then
