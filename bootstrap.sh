@@ -104,7 +104,7 @@ if [ "$(uname)" == "Darwin" ] ; then
     #pyenv install 2.7.10
     #pyenv install 3.5.0
 
-    brew cask install java firefox zotero atom visual-studio-code
+    brew cask install java firefox zotero atom visual-studio-code go
     #brew cask install sublime-text textmate
     brew install emacs --with-cocoa
 
@@ -138,6 +138,9 @@ if [ "$(uname)" == "Darwin" ] ; then
     brew install ghc
     brew install cabal-install
     cabal update
+
+    go get golang.org/x/tools/cmd/godoc
+    go get github.com/golang/lint/golint
 
     # install Chromecast
     # install Adobe Reader
