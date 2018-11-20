@@ -115,7 +115,7 @@ if [ "$(uname)" == "Darwin" ] ; then
 
     brew cask install eclipse-ide xmind libreoffice
 
-    brew cask install mactex texshop latexit
+    brew cask install mactex texshop latexit ipe
     
     # install Cisco mobility client and set up UAlberta VPN
     # set up department printers
