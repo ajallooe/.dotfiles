@@ -104,7 +104,7 @@ if [ "$(uname)" == "Darwin" ] ; then
     #pyenv install 2.7.10
     #pyenv install 3.5.0
 
-    brew cask install java firefox zotero atom
+    brew cask install java firefox zotero atom visual-studio-code
     #brew cask install sublime-text textmate
     brew install emacs --with-cocoa
 
