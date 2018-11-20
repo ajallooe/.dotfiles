@@ -141,7 +141,7 @@ if [ "$(uname)" == "Darwin" ] ; then
 
     # install Chromecast
     # install Adobe Reader
-    brew cask install adobe-acrobat-reader
+    brew cask install adobe-acrobat-reader jdownloader
     brew cask install google-backup-and-sync skype telegram-desktop google-chrome
     # install Google Drive App
     # install Dropbox App
