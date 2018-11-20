@@ -149,7 +149,7 @@ if [ "$(uname)" == "Darwin" ] ; then
 
     #brew cask install skype google-drive
     brew cask install dropbox flash-player
-    brew cask install github-desktop sourcetree
+    brew cask install github sourcetree
     #brew cask install viber electric-sheep
 
     brew cask install xscreensaver
