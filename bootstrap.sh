@@ -125,7 +125,7 @@ if [ "$(uname)" == "Darwin" ] ; then
     brew cask install xquartz caffeine flux karabiner-elements
     brew cask install vlc alfred little-snitch transmit
     brew cask alfred link
-    brew cask install thefuck
+    brew install thefuck
     apm install sync-settings
 
     brew install gnuplot --with-x11
@@ -155,6 +155,7 @@ if [ "$(uname)" == "Darwin" ] ; then
     brew cask install xscreensaver
 
 
+    mkdir ~/.ssh
     ln -s ~/.dotfiles/sshconfig ~/.ssh/config
     if [ -z ${DISPLAY} ]
     then
