@@ -127,6 +127,8 @@ if [ "$(uname)" == "Darwin" ] ; then
     #brew cask alfred link
     brew install thefuck
     apm install sync-settings
+    code --install-extension shan.code-settings-sync
+    # configure Atom sync settings, VS code settings sync and update extensions
 
     brew install gnuplot --with-x11
 
