@@ -122,8 +122,8 @@ if [ "$(uname)" == "Darwin" ] ; then
 
     #brew cask install tunnelblick seil
     brew install dos2unix
-    brew cask install xquartz caffeine flux karabiner-elements
-    brew cask install vlc alfred little-snitch transmit
+    brew cask install xquartz caffeine flux karabiner-elements powershell
+    brew cask install vlc alfred little-snitch #transmit
     #brew cask alfred link
     brew install thefuck
     apm install sync-settings
