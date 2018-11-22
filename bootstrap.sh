@@ -65,6 +65,12 @@ if [ "$(uname)" == "Darwin" ] ; then
     cd ~/.vim/bundle/YouCompleteMe
     ./install.py --clang-completer
     cd ~/.dotfiles
+    
+    git clone https://github.com/chriskempson/base16-xresources.git
+    git clone https://github.com/h404bi/base16-xshell.git
+    git clone https://github.com/golf1052/base16-vscode.git
+    git clone https://github.com/chriskempson/base16-vim
+    https://github.com/chriskempson/base16-shell.git
 
     brew install gdb ssh-copy-id wget watch source-highlight ag reattach-to-user-namespace
 
@@ -105,6 +111,10 @@ if [ "$(uname)" == "Darwin" ] ; then
     #pyenv install 3.5.0
 
     brew cask install java firefox zotero atom visual-studio-code go
+
+    brew tap zegervdv/zathura
+    brew install zathura zathura-pdf-poppler zathura-djvu zathura-ps synctex
+
     #brew cask install sublime-text textmate
     brew install emacs --with-cocoa
 
