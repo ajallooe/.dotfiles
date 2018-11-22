@@ -60,6 +60,8 @@ if [ "$(uname)" == "Darwin" ] ; then
 
     git clone https://github.com/chriskempson/base16-iterm2 ~/.iterm2/base16
 
+    got clone https://github.com/chriskempson/base16-shell.git
+
     vim +PluginInstall +qall
 
     cd ~/.vim/bundle/YouCompleteMe
@@ -70,7 +72,6 @@ if [ "$(uname)" == "Darwin" ] ; then
     git clone https://github.com/h404bi/base16-xshell.git
     git clone https://github.com/golf1052/base16-vscode.git
     git clone https://github.com/chriskempson/base16-vim
-    https://github.com/chriskempson/base16-shell.git
 
     brew install gdb ssh-copy-id wget watch source-highlight ag reattach-to-user-namespace
 
