@@ -142,6 +142,7 @@ if [ "$(uname)" == "Darwin" ] ; then
     # configure Atom sync settings, VS code settings sync and update extensions
 
     brew install gnuplot --with-x11
+    brew install graphviz
 
     brew install doxygen
 
