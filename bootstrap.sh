@@ -92,17 +92,75 @@ if [ "$(uname)" == "Darwin" ] ; then
     brew tap caskroom/fonts
     brew cask install font-input font-source-code-pro
     mkvirtualenv --python=/usr/local/bin/python3 sci
-    pip3 install numpy scipy matplotlib pandas sympy nose
-    pip3 install jupyter
-    pip3 install ipython[all]
-    pip3 install pandoc
+    pip install numpy scipy
+    pip install sympy
+    pip install pandas nose
+    pip install matplotlib seaborn plotly cufflinks pydotplus
+    pip install ipython[all] jupyter jupyterlab ipywidgets
+    pip install pandoc
     #jupyter qtconsole --ConsoleWidget.font_family="Source Code Pro" --ConsoleWidget.font_size=14
-    pip3 install tensorflow
+    pip install scikit-learn
+    pip install torch torchvision
+    pip install tensorflow tensorflow-probability
+    pip install keras keras-rl
+    pip install theano
+    pip install gym
+    pip install rl_coach
+    pip install dopamine
+    pip install statsmodels
+    pip install watermark
+    pip install networkx
+    pip install nltk
+    pip install deap
+    pip install gensim
+    pip install patsy
     #brew install --python --qt vtk
     brew install wxmac
     #brew install zmq
     #pip install pylab
-    #pip install networkx
+    #pip install configobj
+    #pip install envisage
+    #pip install mayavi
+    #pip install trfl pymc skdata glmnet
+
+
+    #brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper
+    #pyenv install 2.7.10
+    #pyenv install 3.5.0
+    
+    
+    mkvirtualenv --python=/usr/local/bin/python2 py2
+    #virtualenv --python=/usr/local/bin/python2 ~/.virtualenvs/py2
+    
+    pip install numpy scipy
+    pip install sympy
+    pip install pandas nose
+    pip install matplotlib seaborn plotly cufflinks pydotplus
+    pip install ipython jupyter jupyterlab ipywidgets
+    #pip install ipython[all]
+    pip install pandoc
+    #jupyter qtconsole --ConsoleWidget.font_family="Source Code Pro" --ConsoleWidget.font_size=14
+    pip install scikit-learn
+    pip install skdata
+    pip install torch torchvision
+    pip install tensorflow tensorflow-probability
+    pip install keras keras-rl
+    pip install theano
+    pip install gym
+    pip install rl_coach
+    pip install trfl
+    pip install dopamine
+    pip install statsmodels
+    pip install watermark
+    pip install networkx
+    pip install nltk
+    pip install deap
+    pip install gensim
+    pip install patsy
+    #brew install --python --qt vtk
+    #brew install wxmac
+    #brew install zmq
+    #pip install pylab
     #pip install configobj
     #pip install envisage
     #pip install mayavi
@@ -110,6 +168,8 @@ if [ "$(uname)" == "Darwin" ] ; then
     #brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper
     #pyenv install 2.7.10
     #pyenv install 3.5.0
+    #pip install pymc glmnet
+    
 
     brew cask install java firefox zotero atom visual-studio-code go
 

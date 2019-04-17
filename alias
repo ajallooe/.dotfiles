@@ -97,4 +97,5 @@ alias gogui="/Users/ajallooe/work/research/gogui/gogui-1.4.9/bin/gogui"
 alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw"
 
 alias sci="source ~/.virtualenvs/sci/bin/activate"
+alias py2="source ~/.virtualenvs/py2/bin/activate"
 
