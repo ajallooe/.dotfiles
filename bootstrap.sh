@@ -94,6 +94,7 @@ if [ "$(uname)" == "Darwin" ] ; then
     mkvirtualenv --python=/usr/local/bin/python3 sci
     pip install numpy scipy
     pip install sympy
+    pip install cvxpy
     pip install pandas nose
     pip install matplotlib seaborn plotly cufflinks pydotplus
     pip install ipython[all] jupyter jupyterlab ipywidgets
@@ -134,6 +135,7 @@ if [ "$(uname)" == "Darwin" ] ; then
     
     pip install numpy scipy
     pip install sympy
+    pip install cvxpy
     pip install pandas nose
     pip install matplotlib seaborn plotly cufflinks pydotplus
     pip install ipython jupyter jupyterlab ipywidgets
