@@ -9,7 +9,7 @@ Icon?
 
 # VSCode settings
 .vscode/
-.code-workspace
+*.code-workspace
 
 # Shell history and local state
 .zsh_history
@@ -29,4 +29,3 @@ yarn-error.log*
 # Trash and temp files
 .Trash
 *~
-dotfiles.code-workspace
