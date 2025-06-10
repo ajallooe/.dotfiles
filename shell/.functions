@@ -1,6 +1,4 @@
 
-
-
 # Function: load_envs_dir
 # Loads environment variables from a given directory with optional pattern matching.
 # Each file whose name matches the pattern becomes a variable with its content as the value.
@@ -27,4 +25,70 @@ load_envs_dir() {
       export "$var_name=$var_value"
     fi
   done
+}
+
+# Function: create_repo
+# Initializes a new local repo with a README and .gitignore and sets up a remote GitHub repository.
+create_repo() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: create_repo <title> [project-name]"
+    return 1
+  fi
+
+  local title="$1"
+  local project_name="$2"
+
+  if [[ -z "$project_name" ]]; then
+    project_name="$(basename "$PWD")"
+  fi
+
+  if [[ "$PWD" == "$HOME" || "$PWD" == "$HOME/workspace" ]]; then
+    echo "Refusing to initialize a git repository in $PWD"
+    return 1
+  fi
+
+  # Use Zsh-style prompt if available, fallback to Bash
+  if command -v zsh >/dev/null && [[ -n "$ZSH_VERSION" ]]; then
+    read "confirm?Initialize GitHub repository '$project_name' with title '$title' in $PWD? [y/N] "
+  else
+    read -p "Initialize GitHub repository '$project_name' with title '$title' in $PWD? [y/N] " confirm
+  fi
+  if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
+    echo "Aborted."
+    return 1
+  fi
+
+  echo -e "# $title (<https://github.com/ajallooe/$project_name>)\n" > README.md
+
+  cat > .gitignore <<EOF
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon files
+Icon?
+._*
+
+# VSCode settings
+.vscode/
+*.code-workspace
+
+# Trash and temp files
+.Trash
+*~
+EOF
+
+  git init
+  git add README.md .gitignore
+  git commit -m "Init: Repo created with README.md and .gitignore"
+  git branch -M main
+
+  if git remote | grep -q origin; then
+    git remote set-url origin "https://github.com/ajallooe/$project_name.git"
+  else
+    git remote add origin "https://github.com/ajallooe/$project_name.git"
+  fi
+
+  echo "Repository initialized and remote set to https://github.com/ajallooe/$project_name.git"
 }
