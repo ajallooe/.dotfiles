@@ -1,1 +1,0 @@
-# Fresh start for dotfiles
