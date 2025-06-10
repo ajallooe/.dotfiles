@@ -1,0 +1,30 @@
+
+
+
+# Function: load_envs_dir
+# Loads environment variables from a given directory with optional pattern matching.
+# Each file whose name matches the pattern becomes a variable with its content as the value.
+load_envs_dir() {
+  local env_dir="$1"
+  local pattern="${2:-*}"
+
+  if [[ -z "$env_dir" ]]; then
+    echo "Usage: load_envs_dir /path/to/env_dir [pattern]"
+    return 1
+  fi
+
+  if [[ ! -d "$env_dir" ]]; then
+    echo "Error: '$env_dir' is not a directory."
+    return 1
+  fi
+
+  for env_file in "$env_dir"/$pattern; do
+    if [[ -f "$env_file" ]]; then
+      local var_name
+      var_name=$(basename "$env_file")
+      local var_value
+      var_value=$(<"$env_file")
+      export "$var_name=$var_value"
+    fi
+  done
+}

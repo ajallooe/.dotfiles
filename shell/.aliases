@@ -1,0 +1,2 @@
+# Alias: quick editor using the "Quick" profile of VSCode
+alias c='code --profile "Quick"'
